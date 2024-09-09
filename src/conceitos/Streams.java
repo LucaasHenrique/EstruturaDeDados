@@ -1,4 +1,4 @@
-package stream;
+package conceitos;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +9,6 @@ public class Main {
         frutas.add("maça");
         frutas.add("banana");
 
-        frutas.stream().forEach(String::new);
+        frutas.stream().forEach(System.out::println);
     }
 }
