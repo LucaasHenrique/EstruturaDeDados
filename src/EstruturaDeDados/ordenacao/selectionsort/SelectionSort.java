@@ -1,4 +1,4 @@
-package EstruturaDeDados.selectionsort;
+package EstruturaDeDados.ordenacao.selectionsort;
 import java.util.*;
 
 // Ordenação por inserção
@@ -16,7 +16,7 @@ public class SelectionSort {
         System.out.println("array não ordenado: " + Arrays.toString(x));
         /*Ordenando de forma crescente, laço que pecorre da 1 posição à penultima posição do vetor
         * elegendo um numero para ser comparado*/
-        for (i=0; i<=x.length-1; i++) {
+        for (i=0; i<=x.length-2; i++) {
             eleito = x[i];
             //encontrando o menor numero à direita do eleito com sua respectiva posição
             //posiçao do eleito = 1, primeiro numero à direita do eleito na posição = x + 1
@@ -25,7 +25,7 @@ public class SelectionSort {
             //laço que pecorre os elementos que estão à direita do numero eleito, retornando o menor numero à direita
             // é sua posição
 
-            for (j=i+2; j<=x.length; j++) {
+            for (j=i+2; j<=x.length-1; j++) {
                 if (x[j] < menor) {
                     menor = x[j];
                     pos = j;

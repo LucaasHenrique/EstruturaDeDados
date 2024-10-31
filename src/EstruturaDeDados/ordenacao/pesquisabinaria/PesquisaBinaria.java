@@ -1,4 +1,4 @@
-package EstruturaDeDados.pesquisabinaria;
+package EstruturaDeDados.ordenacao.pesquisabinaria;
 
 import java.util.Scanner;
 

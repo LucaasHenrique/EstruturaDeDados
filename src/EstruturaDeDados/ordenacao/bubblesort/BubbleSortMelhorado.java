@@ -1,12 +1,13 @@
-package EstruturaDeDados.bubblesort;
-import java.util.*;
+package EstruturaDeDados.ordenacao.bubblesort;
 
+import java.util.Arrays;
+import java.util.Scanner;
 
-public class BubbleSort {
+public class BubbleSortMelhorado {
     public static void main(String[] args) {
 
         int[] x = new int[5];
-        int n, i, aux;
+        int j, i, aux;
 
 
         Scanner input = new Scanner(System.in);
@@ -18,14 +19,12 @@ public class BubbleSort {
 
         System.out.println("antes do BUBBLE SORT: " + Arrays.toString(x));
 
-        // ordenando de forma crescente
-        for (n=1; n<=x.length; n++) {
-            // laço que pecorre da primeira a ultima posição do vetor
-            for (i=0; i<=3; i++) {
-                if (x[i] > x[i+1]) {
+        for (j=1; j<=x.length - 1; j++) {
+            for (i=4; i>=j; i--) {
+                if (x[i] < x[i-1]) {
                     aux = x[i];
-                    x[i] = x[i+1];
-                    x[i+1] = aux;
+                    x[i] = x[i-1];
+                    x[i-1] = aux;
                 }
             }
         }

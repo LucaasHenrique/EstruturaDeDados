@@ -1,4 +1,4 @@
-package EstruturaDeDados.insertionsort;
+package EstruturaDeDados.ordenacao.insertionsort;
 import java.util.*;
 
 // ALGORITMO DE ORDENAÇAO POR INSERÇÃO

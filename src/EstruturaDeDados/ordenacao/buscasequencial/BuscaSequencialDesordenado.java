@@ -1,9 +1,8 @@
-package EstruturaDeDados.buscasequencial;
+package EstruturaDeDados.ordenacao.buscasequencial;
 
 import java.util.Scanner;
 
-public class BuscaSequencialOrdenada {
-    
+public class BuscaSequencialDesordenado {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int X[] = new int[10];
@@ -20,7 +19,7 @@ public class BuscaSequencialOrdenada {
         achou = 0;
         i = 0;
           
-        while (i <= 9 && achou == 0 && n >= X[i]){
+        while (i <= 9 && achou == 0){
             
             if (X[i] == n) {
                 achou = 1;

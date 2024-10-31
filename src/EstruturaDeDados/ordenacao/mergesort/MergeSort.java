@@ -1,4 +1,4 @@
-package EstruturaDeDados.mergesort;
+package EstruturaDeDados.ordenacao.mergesort;
 import java.util.*;
 
 //Algoritmo de ordenação por intercalação

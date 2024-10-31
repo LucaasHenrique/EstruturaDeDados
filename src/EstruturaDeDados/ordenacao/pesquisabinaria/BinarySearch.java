@@ -1,4 +1,4 @@
-package EstruturaDeDados.pesquisabinaria;
+package EstruturaDeDados.ordenacao.pesquisabinaria;
 
 public class BinarySearch {
  public static void main(String[] args) {

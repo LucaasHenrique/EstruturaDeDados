@@ -1,4 +1,4 @@
-package EstruturaDeDados.quicksort;
+package EstruturaDeDados.ordenacao.quicksort;
 
 import java.util.Arrays;
 import java.util.Scanner;

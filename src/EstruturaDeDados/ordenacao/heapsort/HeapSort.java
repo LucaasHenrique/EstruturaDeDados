@@ -1,4 +1,4 @@
-package EstruturaDeDados.heapsort;
+package EstruturaDeDados.ordenacao.heapsort;
 
 import java.util.Arrays;
 import java.util.Scanner;
