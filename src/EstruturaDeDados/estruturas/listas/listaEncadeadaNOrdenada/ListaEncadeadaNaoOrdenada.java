@@ -1,4 +1,4 @@
-package EstruturaDeDados.estruturas.listaEncadeadaNOrdenada;
+package EstruturaDeDados.estruturas.listas.listaEncadeadaNOrdenada;
 
 import java.util.Scanner;
 

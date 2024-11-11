@@ -1,4 +1,4 @@
-package EstruturaDeDados.estruturas.listaDuplamenteEncadeadaOrdenada;
+package EstruturaDeDados.estruturas.listas.listaDuplamenteEncadeadaOrdenada;
 
 import java.util.Scanner;
 
