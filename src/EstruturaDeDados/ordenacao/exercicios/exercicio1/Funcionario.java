@@ -1,4 +1,4 @@
-package EstruturaDeDados.ordenacao.exercicio1;
+package EstruturaDeDados.ordenacao.exercicios.exercicio1;
 
 public class Funcionario {
     String nome;
