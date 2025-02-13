@@ -1,5 +1,6 @@
 package EstruturaDeDados.estruturas.listas.exercicios.exercicio1;
 
+// Lista simplesmente encadeada e não ordenada
 public class ListaProdutos {
 
     Produto inicio = null;
