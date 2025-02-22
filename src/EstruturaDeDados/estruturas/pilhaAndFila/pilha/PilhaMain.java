@@ -1,11 +1,9 @@
-package EstruturaDeDados.estruturas.pilhaAndFila;
-
-import java.util.List;
+package EstruturaDeDados.estruturas.pilhaAndFila.pilha;
 
 public class PilhaMain {
 
     public static void main(String[] args) {
-        Pilha pilha = new Pilha();
+        Pilha<Integer> pilha = new Pilha<>();
 
         pilha.inserir(2);
         pilha.inserir(5);

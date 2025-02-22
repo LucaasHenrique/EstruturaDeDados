@@ -1,43 +1,49 @@
-package EstruturaDeDados.estruturas.pilhaAndFila;
+package EstruturaDeDados.estruturas.pilhaAndFila.pilha;
 
-public class Pilha {
+import java.util.ArrayList;
+import java.util.List;
 
-    private static class PILHA {
-        public int num;
-        public PILHA prox;
+public class Pilha<T> {
 
-        public PILHA(int num) {
-            this.num = num;
+    private static class PILHA<T> {
+        public T obj;
+        public PILHA<T> prox;
+
+        public PILHA(T obj) {
+            this.obj = obj;
         }
     }
 
-    PILHA topo = null;
-    PILHA aux;
+    PILHA<T> topo = null;
+    PILHA<T> aux;
 
-    public void inserir(int num) {
-        PILHA novo = new PILHA(num);
+    public void inserir(T obj) {
+        PILHA<T> novo = new PILHA<>(obj);
 
         novo.prox = topo;
         topo = novo;
     }
 
-    public void consultarPilha() {
+    public List<T> consultarPilha() {
         if (topo == null)
             System.out.println("A pilha está vazia!");
 
         System.out.println("Consultando a pilha!");
         aux = topo;
+        List<T> pilha = new ArrayList<>();
         while (aux != null) {
-            System.out.println(STR."\{aux.num} ");
+            pilha.add(aux.obj);
             aux = aux.prox;
         }
+        System.out.println(pilha);
+        return pilha;
     }
 
     public void remove() {
         if (topo == null)
             System.out.println("A pilha está vazia!");
 
-        System.out.println("Numero: " + topo.num + " removido");
+        System.out.println("Elemento: " + topo.obj + " removido");
         topo = topo.prox;
     }
 
