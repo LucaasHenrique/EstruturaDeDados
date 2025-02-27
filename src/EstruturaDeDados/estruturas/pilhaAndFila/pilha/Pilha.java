@@ -24,7 +24,7 @@ public class Pilha<T> {
         topo = novo;
     }
 
-    public List<T> consultarPilha() {
+    public void consultarPilha() {
         if (topo == null)
             System.out.println("A pilha está vazia!");
 
@@ -36,8 +36,22 @@ public class Pilha<T> {
             aux = aux.prox;
         }
         System.out.println(pilha);
+    }
+
+    public List<T> retornaPilha() {
+        if (topo == null)
+            System.out.println("A pilha está vazia!");
+
+        aux = topo;
+        List<T> pilha = new ArrayList<>();
+        while (aux != null) {
+            pilha.add(aux.obj);
+            aux = aux.prox;
+        }
+
         return pilha;
     }
+
 
     public void remove() {
         if (topo == null)
