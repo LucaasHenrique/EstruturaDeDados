@@ -1,10 +1,7 @@
-package EstruturaDeDados.estruturas.pilhaAndFila.exercicios;
+package EstruturaDeDados.estruturas.pilhaAndFila.exercicios.exercicio1;
 
 import EstruturaDeDados.estruturas.pilhaAndFila.fila.Fila;
 import EstruturaDeDados.estruturas.pilhaAndFila.pilha.Pilha;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class exercicio1 {
     public static void main(String[] args) {
