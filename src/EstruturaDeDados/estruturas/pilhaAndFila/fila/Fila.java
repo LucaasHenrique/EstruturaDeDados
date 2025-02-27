@@ -32,7 +32,7 @@ public class Fila<T> {
         }
     }
 
-    public List<T> consultarFila() {
+    public void consultarFila() {
         if (inicio == null)
             System.out.println("Fila vazia!");
 
@@ -44,8 +44,22 @@ public class Fila<T> {
             aux = aux.prox;
         }
         System.out.println(fila);
+    }
+
+    public List<T> retornaFila() {
+        if (inicio == null)
+            System.out.println("Fila vazia!");
+
+        aux = inicio;
+        List<T> fila = new ArrayList<>();
+        while (aux != null) {
+            fila.add(aux.obj);
+            aux = aux.prox;
+        }
+
         return fila;
     }
+
 
     public void remove() {
         if (inicio == null)
