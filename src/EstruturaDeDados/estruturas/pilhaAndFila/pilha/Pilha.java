@@ -1,7 +1,10 @@
 package EstruturaDeDados.estruturas.pilhaAndFila.pilha;
 
+import EstruturaDeDados.ordenacao.exercicios.exercicio4.Aluno;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Pilha<T> {
 
@@ -16,6 +19,7 @@ public class Pilha<T> {
 
     PILHA<T> topo = null;
     PILHA<T> aux;
+    Stack<Aluno> alunos = new Stack<>();
 
     public void inserir(T obj) {
         PILHA<T> novo = new PILHA<>(obj);
@@ -67,5 +71,12 @@ public class Pilha<T> {
 
         topo = null;
         System.out.println("Pilha esvaziada!");
+    }
+
+    public T topoPilha() {
+        if (topo == null)
+            System.out.println("Pilha vazia");
+
+        return topo.obj;
     }
 }
