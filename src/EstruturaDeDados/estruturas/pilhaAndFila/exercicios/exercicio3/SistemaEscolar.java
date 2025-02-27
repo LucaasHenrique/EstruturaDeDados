@@ -4,9 +4,7 @@ import EstruturaDeDados.estruturas.pilhaAndFila.fila.Fila;
 import EstruturaDeDados.estruturas.pilhaAndFila.pilha.Pilha;
 
 import java.text.MessageFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class SistemaEscolar {
 
@@ -18,8 +16,8 @@ public class SistemaEscolar {
         }
     }
 
-    private Pilha<Aluno> alunos = new Pilha<>();
-    private Fila<Nota> notas = new Fila<>();
+    private final Pilha<Aluno> alunos = new Pilha<>();
+    private final Fila<Nota> notas = new Fila<>();
 
     public void cadastrarAluno(String nome) {
         Aluno novoAluno = new Aluno(GeradorMatricula.getProximaMatricula(), nome);
@@ -27,7 +25,7 @@ public class SistemaEscolar {
         System.out.println("Aluno cadastrado!");
     }
 
-    public void mostrar() {
+    public void consultarAlunos() {
         alunos.consultarPilha();
     }
 
@@ -106,5 +104,64 @@ public class SistemaEscolar {
             soma += nota;
         }
         return soma / notas.size();
+    }
+
+    public void consultarAlunoSemNotas() {
+        // Solução O(n + m)
+        HashSet<Integer> alunoComNota = new HashSet<>();
+
+        for (Nota nota: notas.retornaFila()) {
+            alunoComNota.add(nota.getNumero());
+        }
+
+        for (Aluno aluno: alunos.retornaPilha()) {
+            if (!alunoComNota.contains(aluno.getNumero())) {
+                System.out.println("Aluno " + aluno.getNumero() + " não possui nota!");
+            }
+        }
+
+       //Solução O(n^2)
+        /*for (Aluno aluno: alunos.retornaPilha()) {
+            boolean alunoComNota = false;
+
+            for (Nota nota: notas.retornaFila()) {
+                if (aluno.getNumero() == nota.getNumero()) {
+                    alunoComNota = true;
+                    break;
+                }
+            }
+
+            if (!alunoComNota) {
+                System.out.println("Aluno " + aluno.getNumero() + " não possui nota!");
+            }
+        }*/
+    }
+
+    public void removerAluno() {
+        HashSet<Integer> alunoComNota = new HashSet<>();
+
+        for (Nota nota: notas.retornaFila()) {
+            alunoComNota.add(nota.getNumero());
+        }
+
+        Aluno alunoTopo = alunos.topoPilha();
+        boolean temNota = false;
+        for (Nota nota: notas.retornaFila()) {
+            if (alunoTopo.getNumero() == nota.getNumero()) {
+                temNota = true;
+                break;
+            }
+        }
+
+        if (!temNota) {
+            System.out.println("removendo da pilha de alunos: ");
+            alunos.remove();
+        } else {
+            System.out.println(MessageFormat.format("Não é possível remover {0}, pois ele tem nota registrada.", alunoTopo.getNome()));
+        }
+    }
+
+    public void removeNota() {
+        notas.remove();
     }
 }
