@@ -76,4 +76,11 @@ public class Fila<T> {
         inicio = null;
         System.out.println("Fila esvaziada!");
     }
+
+    public T retornaInicio() {
+        if (inicio == null)
+            System.out.println("Fila vazia!");
+
+        return inicio.obj;
+    }
 }
