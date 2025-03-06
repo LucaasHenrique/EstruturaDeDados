@@ -1,6 +1,6 @@
 package conceitos.Threads;
 
-public class Main {
+public class Main{
     public static void main(String[] args) throws InterruptedException {
         ThreadExemple threadExemple = new ThreadExemple("Thread 1");
         ThreadExemple threadExemple2 = new ThreadExemple("Thread 2");
@@ -14,10 +14,11 @@ public class Main {
         thread2.start();
         thread3.start();
 
-        thread1.join();
-        thread2.join();
-        thread3.join();
+//        thread1.join();
+//        thread2.join();
+//        thread3.join();
 
+        // Main thread
         for (int i = 0; i < 100; i++) {
             System.out.println("Main thread | valor atual do loop: " + i);
         }
